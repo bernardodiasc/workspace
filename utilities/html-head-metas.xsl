@@ -59,7 +59,7 @@
 
 		<meta name="viewport" content="width=device-width" />
 		<meta name="robots" content="index,follow" />
-		<meta name="generator" content="Symphony CMS" /> <!-- I'm proud to announce, are'n you? -->
+		<meta name="generator" content="Symphony CMS" /> <!-- I'm proud to announce, aren't you? -->
 		<meta name="author" content="{//params/website-name}" />
 		<meta name="copyright" content="© {//params/this-year} {//params/website-name}" />
 		<meta name="distribution" content="global" />
