@@ -7,7 +7,7 @@
 	<xsl:import href="../utilities/utils-format-date.xsl"/>
 	<xsl:import href="../utilities/utils-truncate.xsl"/>
 
-	<xsl:import href="../utilities/head.xsl"/>
+	<xsl:import href="../utilities/html-head-metas.xsl"/>
 	
 	<xsl:output method="html" encoding="utf-8" omit-xml-declaration="yes" indent="no" />
 	
@@ -28,20 +28,7 @@
 		<xsl:comment><![CDATA[[if gt IE 8]><!]]></xsl:comment><html lang="pt-BR" prefix="og: http://ogp.me/ns#" itemscope="itemscope" itemtype="http://schema.org/Thing"><xsl:comment><![CDATA[<![endif]]]></xsl:comment>
 
 			<head>
-				<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-				<meta http-equiv="imagetoolbar" content="no" />
-				<meta http-equiv="content-language" content="pt-br" />
-
-				<meta name="viewport" content="width=device-width" />
-				<meta name="robots" content="index,follow" />
-				<meta name="generator" content="Symphony CMS" />
-				<meta name="author" content="{//params/website-name}" />
-				<meta name="copyright" content="© {//params/this-year} {//params/website-name}" />
-				<meta name="distribution" content="global" />
-				<meta name="rating" content="general" />
-				<meta name="revisit-after" content="1 day" />
-				<meta name="expires" content="never" />
-				
+				<!-- This is a hook allowing pages to add metas -->
 				<xsl:apply-templates select="/data" mode="add_head_meta" />
 				
 				<!-- CSS -->

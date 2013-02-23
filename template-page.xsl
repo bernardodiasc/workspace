@@ -15,8 +15,8 @@
 	Add more metas
 -->
 	<xsl:template match="data" mode="add_head_meta">
-		<!-- Head Metas @ utilities head -->
-		<xsl:call-template name="head" />
+		<!-- Head Metas @ utilities html-head-metas -->
+		<xsl:call-template name="html-head-metas" />
 	</xsl:template>
 
 <!--
