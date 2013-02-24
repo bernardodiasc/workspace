@@ -92,5 +92,17 @@
 		</html>
 	 
 	</xsl:template>
+
+  <!-- Add this in pages to add more metas -->
+  <xsl:template match="data" mode="add_head_meta">
+  </xsl:template>
+
+  <!-- Add this in pages to add more stylesheets -->
+  <xsl:template match="data" mode="add_head_css">
+  </xsl:template>
+
+  <!-- Add this in pages to add more scripts -->
+  <xsl:template match="data" mode="add_body_js">
+  </xsl:template>
 	 
 </xsl:stylesheet>
