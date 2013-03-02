@@ -14,7 +14,8 @@
 	<xsl:variable name="admin-logged-in" select="/data/logged-in-author/author"/>
 	<xsl:variable name="enviroment">
 		<xsl:choose>
-			<xsl:when test="//params/root = 'xxx'">development</xsl:when> <!-- xxx must have the root value on dev enviroment -->
+			<!-- xxx must have the root value on dev enviroment -->
+			<xsl:when test="//params/root = 'xxx'">development</xsl:when>
 			<xsl:otherwise>production</xsl:otherwise>
 		</xsl:choose>
 	</xsl:variable>
