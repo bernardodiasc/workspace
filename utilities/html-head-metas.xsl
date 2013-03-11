@@ -6,7 +6,7 @@
 		Version: 0.2.1
 		Author: Bernardo Dias da Cruz <bernardodiasdacruz@gmail.com>
 		Url: https://github.com/germchaos/workspace/blob/master/utilities/html-head-metas.xsl
-		Description: Allow easily add most important HTML Metas tags in each page and offers nice SEO integration with main Social Networks.
+		Description: Allow easily add most important HTML Meta tags in each page and offers nice SEO integration with main Social Networks.
 		================================================================================
 
 		How to use:
