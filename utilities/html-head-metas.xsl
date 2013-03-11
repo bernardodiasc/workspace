@@ -2,8 +2,14 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	
 	<!--
-		HTML Head Metas v0.2
-		====================
+		Name: HTML Head Metas
+		Version: 0.2.1
+		Author: Bernardo Dias da Cruz <bernardodiasdacruz@gmail.com>
+		Url: https://github.com/germchaos/workspace/blob/master/utilities/html-head-metas.xsl
+		Description: Allow easily add most important HTML Metas tags in each page and offers nice SEO integration with main Social Networks.
+		================================================================================
+
+		How to use:
 
 		1. Add this attributes on <html>
 			- prefix="og: http://ogp.me/ns#"
@@ -48,11 +54,11 @@
 			- The 'title' param must have a separator in the end (like ' | ', ' - ', ' / ' or any else);
 			- The 'language' param can be "en" or "en-GB" or "en_GB" or "en GB" (the 3th character dos not matter);
 			- The 'twitter-site-id' param refers to the Website Twitter ID;
-			- The 'twitter-creator-id' param refers to the Author Twitter ID (like a article author);
+			- The 'twitter-creator-id' param refers to the Author Twitter ID (like an article author);
 			- The 'google-plus-id' refers to Google Plus numeric ID of the Author;
 			- For better use set some default values on Params declarations!
 
-		# If you like this stuff and know how to improve, contact-me at Twitter @germkaos.
+		# If you like this stuff and know how to improve contact-me.
 
 	-->
 
@@ -62,18 +68,17 @@
 		<xsl:param name="description" select="''" />
 		<xsl:param name="image" select="''" />
 		<xsl:param name="date" select="''" />
-		<xsl:param name="language" select="''" />
+		<xsl:param name="language" select="'en'" />
 		<xsl:param name="twitter-site-id" select="''" />
 		<xsl:param name="twitter-creator-id" select="''" />
 		<xsl:param name="google-plus-id" select="''" />
 
-		<!-- Defining default Title with Website Name -->
+		<!-- Defining default Title with Website Name param -->
 		<xsl:variable name="super-title" select="//params/website-name" />
 				
 		<!-- Defining content-language format -->
 		<xsl:variable name="content-language">
 			<xsl:choose>
-				<xsl:when test="$language = ''"><xsl:value-of select="'en'" /></xsl:when>
 				<xsl:when test="string-length($language) = 5">
 					<xsl:value-of select="concat(substring($language,1,2), '-', substring($language,4,5))" />
 				</xsl:when>
@@ -172,7 +177,7 @@
 		<!--
 			Google Plus Authoring
 			More info at http://support.google.com/webmasters/bin/answer.py?hl=en&answer=1408986
-			You also can use <a href="https://plus.google.com/{USERID}? rel=author">AUTHOR NAME</a> inside page content.
+			You also can use <a href="https://plus.google.com/{USERID}?rel=author">AUTHOR NAME</a> inside page content.
 		-->
 		<xsl:if test="$google-plus-id != ''">
 			<link rel="author" href="https://plus.google.com/{$google-plus-id}"/>

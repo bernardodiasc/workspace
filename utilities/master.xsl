@@ -14,8 +14,9 @@
 	<xsl:variable name="admin-logged-in" select="/data/logged-in-author/author"/>
 	<xsl:variable name="enviroment">
 		<xsl:choose>
-			<!-- xxx must have the root value on dev enviroment -->
+			<!-- xxx must have the root value on dev and staging enviroment -->
 			<xsl:when test="//params/root = 'xxx'">development</xsl:when>
+			<xsl:when test="//params/root = 'xxx'">staging</xsl:when>
 			<xsl:otherwise>production</xsl:otherwise>
 		</xsl:choose>
 	</xsl:variable>
@@ -33,14 +34,13 @@
 				<xsl:apply-templates select="/data" mode="add_head_meta" />
 				
 				<!-- CSS -->
-				<link rel="stylesheet" href="{$root}/less/assets/css/styles.less" />
-				<!--<link rel="stylesheet" href="{$workspace}/css/styles.css" />-->
+				<link rel="stylesheet" href="{$workspace}/assets/css/styles.css" />
 				
 				<!-- Favicons -->
-				<!--<link rel="shortcut icon" href="{$workspace}/assets/img/favicon.ico" />
+				<link rel="shortcut icon" href="{$workspace}/assets/img/favicon.ico" />
 				<link rel="apple-touch-icon" href="{$workspace}/assets/img/apple-touch-icon.png" />
 				<link rel="apple-touch-icon" sizes="72x72" href="{$workspace}/assets/img/apple-touch-icon-72x72.png" />
-				<link rel="apple-touch-icon" sizes="114x114" href="{$workspace}/assets/img/apple-touch-icon-114x114.png" />-->
+				<link rel="apple-touch-icon" sizes="114x114" href="{$workspace}/assets/img/apple-touch-icon-114x114.png" />
 				
 				<!-- JS -->
 				<xsl:text disable-output-escaping='yes'>&lt;!--[if lt IE 8]&gt;</xsl:text>
