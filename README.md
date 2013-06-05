@@ -34,3 +34,7 @@ Actualy this workspace uses LESS, but I'll also make it with SASS in a near futu
 - Normalize 2.1.0
 - Less Hat 1.1.1
 - Semantic.gs 1.2
+
+---
+
+Thanks for everyone in the SymphonyCMS community for everything. From heart. ;)
