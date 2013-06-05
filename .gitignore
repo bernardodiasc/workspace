@@ -1,9 +1,0 @@
-*~
-*.lock
-*.DS_Store
-*.swp
-/manifest/cache/*
-/manifest/logs/*
-/manifest/tmp/*
-this.sublime-project
-this.sublime-workspace

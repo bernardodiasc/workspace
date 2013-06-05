@@ -1,5 +1,5 @@
 # Symphony CMS Workspace
-- Version: 1.1
+- Version: 1.2
 - Author: Bernardo Dias da Cruz <bernardodiasdacruz@gmail.com> ([@germkaos](http://twitter.com/germkaos))
 - Url: [http://github.com/germchaos/workspace](http://github.com/germchaos/workspace)
 - Requirements: [Symphony 2.3](https://github.com/symphonycms/symphony-2) or greater
