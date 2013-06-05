@@ -5,7 +5,7 @@
 - Requirements: [Symphony 2.3](https://github.com/symphonycms/symphony-2) or greater
 
 ## Description
-This is my Symphony CMS Workspace Bootstrap. Its a system blank workspace (no sections, no data sources, no events).
+This is my startup Symphony CMS Workspace. Its a system blank workspace (no sections, no data sources, no events).
 The main purpose is provide the most common tools and structures for front-end development. Also various [XSL Utilities from community](http://getsymphony.com/download/xslt-utilities/).
 
 ## Usage

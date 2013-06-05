@@ -15,8 +15,8 @@
 	<xsl:variable name="enviroment">
 		<xsl:choose>
 			<!-- xxx must have the root value on dev and staging enviroment -->
-			<xsl:when test="//params/root = 'xxx'">development</xsl:when>
-			<xsl:when test="//params/root = 'xxx'">staging</xsl:when>
+			<xsl:when test="//params/root = 'http://localhost'">development</xsl:when>
+			<xsl:when test="//params/root = 'http://localhost'">staging</xsl:when>
 			<xsl:otherwise>production</xsl:otherwise>
 		</xsl:choose>
 	</xsl:variable>
@@ -62,8 +62,6 @@
 				<!-- Pages @ pages -->
 				<xsl:apply-templates />
 				
-				<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>-->
-				<!--<script>window.jQuery || document.write('<script src="{$workspace}/assets/js/vendor/jquery-1.9.0.min.js"><\/script>')</script>-->
 				<script src="{$workspace}/assets/js/vendor/jquery-1.9.0.min.js"></script>
 				<script src="{$workspace}/assets/js/vendor/jquery.placeholder.min.js"></script>
 				<script>
@@ -78,7 +76,7 @@
 						});
 					});
 				</script>
-				<xsl:if test="not($admin-logged-in) and not($enviroment = 'development')">
+				<xsl:if test="not($admin-logged-in) and $enviroment = 'production'">
 					<script>
 						var _gaq=[['_setAccount','xxxxxxxxxxx'],['_trackPageview']];
 						(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
@@ -94,16 +92,24 @@
 	 
 	</xsl:template>
 
+<!--
+The approach below I saw in https://github.com/vlad-ghita/symphony-resources/blob/master/workspace/widgets/master/xsl/master.xsl
+Thanks VladG!
+-->
+
   <!-- Add this in pages to add more metas -->
   <xsl:template match="data" mode="add_head_meta">
+  	<xsl:apply-imports/>
   </xsl:template>
 
   <!-- Add this in pages to add more stylesheets -->
   <xsl:template match="data" mode="add_head_css">
+  	<xsl:apply-imports/>
   </xsl:template>
 
   <!-- Add this in pages to add more scripts -->
   <xsl:template match="data" mode="add_body_js">
+  	<xsl:apply-imports/>
   </xsl:template>
 	 
 </xsl:stylesheet>

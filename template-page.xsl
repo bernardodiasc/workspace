@@ -15,6 +15,7 @@
 	Add more metas
 -->
 	<xsl:template match="data" mode="add_head_meta">
+		<xsl:apply-imports/>
 		<!-- Head Metas @ utilities html-head-metas -->
 		<xsl:call-template name="html-head-metas" />
 	</xsl:template>
@@ -24,6 +25,7 @@
 	Add more stylesheets
 -->
 	<xsl:template match="data" mode="add_head_css">
+		<xsl:apply-imports/>
 	</xsl:template>
 
 <!--
@@ -31,5 +33,6 @@
 	Add more scripts
 -->
 	<xsl:template match="data" mode="add_body_js">
+		<xsl:apply-imports/>
 	</xsl:template>
 </xsl:stylesheet>
