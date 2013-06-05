@@ -37,4 +37,4 @@ Actualy this workspace uses LESS, but I'll also make it with SASS in a near futu
 
 ---
 
-Thanks for everyone in the SymphonyCMS community for everything. From heart. ;)
+Thanks to everyone in the SymphonyCMS community for everything. From heart. ;)
